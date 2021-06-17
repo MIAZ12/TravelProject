@@ -7,8 +7,12 @@ import router from './router';
 import './assets/style/reset.css';
 import './assets/style/border.css';
 import './assets/style/iconfont.css';
+// eslint-disable-next-line import/first
+import VueAwesomeSwiper from 'vue-awesome-swiper';
+// eslint-disable-next-line import/first
+import 'swiper/swiper-bundle.css';
 
-
+Vue.use(VueAwesomeSwiper);
 Vue.config.productionTip = false;
 fastClick.attach(document.body);
 /* eslint-disable no-new */

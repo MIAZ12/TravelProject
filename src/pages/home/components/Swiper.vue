@@ -1,0 +1,49 @@
+<template>
+  <div class="wrapper">
+    <swiper :options="swiperOptions">
+      <swiper-slide v-for="item of swiperList" :key="item.id">
+        <img
+          class="swiper-img"
+          :src="item.imgUrl"
+        />
+      </swiper-slide>
+      
+      <div class="swiper-pagination" slot="pagination">11</div>
+    </swiper>
+  </div>
+</template>
+<script>
+export default {
+  name: "HomeSwiper",
+  data() {
+    return {
+      swiperOptions: {
+          pagination:".swiper-pagination",
+          loop:true,
+
+      },
+      swiperList:[{
+          id:'0001',
+          imgUrl:"https://imgs.qunarzz.com/vs_ceph_vcimg/c0a60fa20379efa4f02ce527a680dc1b.jpeg"
+      },
+      {
+          id:'0002',
+          imgUrl:"https://imgs.qunarzz.com/vs_ceph_vcimg/79faa5a73731e84a7731db49d5baa91e.jpeg"
+      }]
+    };
+  },
+};
+</script>
+<style scoped>
+.wrapper {
+    /* 设置宽高比例 */
+    width:100%;
+    height:0;
+    overflow: hidden;
+    padding-bottom: 31.25%;
+    background: grey;
+}
+.swiper-img {
+  width: 100%;
+}
+</style>
