@@ -88,6 +88,7 @@ export default {
 <style scoped >
 .icons {
   height: 0;
+  margin-top: .1rem;
   padding-bottom: 50%;
   overflow: hidden;
   /* background: green; */
