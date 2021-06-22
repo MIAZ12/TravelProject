@@ -2,11 +2,11 @@
     <div>
         <div class="recommend-title">热销推荐</div>
         <ul>
-            <li class="item" v-for="item in recommendList" :key="item.id">                
+            <li class="item" v-for="item in list" :key="item.id">                
                 <img class="item-img" :src="item.imgUrl"/>               
                 <div class="item-info">
                     <p class="item-title">{{item.title}}</p>
-                    <p class="item-desc">{{item.desc}}</p>
+                    <p class="item-desc">{{item.price}}</p>
                     <button class="item-button">查看详情</button>
                 </div>
             </li>
@@ -16,22 +16,11 @@
 <script>
   export default{
       name:'HomeRecommend',
+      props:{
+          list:Array,
+      },
       data(){
-          return {
-              recommendList:[
-                  {
-                      id:"01",
-                      title:"玻璃大峡谷",
-                      desc:"集合玻璃平台、栈道、索桥为的观光玻璃组合",
-                      imgUrl:"https://imgs.qunarzz.com/p/p90/201308/23/5ce590745204c90193835fbb.jpg_256x160_04bdc5bd.jpg",
-                  },
-                  {
-                      id:"02",
-                      title:"玻璃大峡谷",
-                      desc:"集合玻璃平台、栈道、索桥为的观光玻璃组合",
-                      imgUrl:"https://imgs.qunarzz.com/p/p90/201308/23/5ce590745204c90193835fbb.jpg_256x160_04bdc5bd.jpg",
-                  },
-              ]
+          return {              
           }
       }
   }
