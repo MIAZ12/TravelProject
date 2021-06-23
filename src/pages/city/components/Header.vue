@@ -21,6 +21,7 @@ export default {
       height: .86rem;
       background-color: #00bcd4;
       color:#fff;
+      font-size:.4rem;
   }
   .header-back{
       position: absolute;

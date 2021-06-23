@@ -53,7 +53,7 @@ export default {
         this.hotList=data.hotList;
         this.weekendList=data.weekendList;
       }
-      console.log(res);
+      // console.log(res);
     }
   }
 };
