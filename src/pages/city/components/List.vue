@@ -44,7 +44,7 @@ export default {
       letter:String,
   },
   mounted(){
-      this.scroll=new Bscroll(this.$refs.wrapper);
+      this.scroll=new Bscroll(this.$refs.wrapper,{click:true});
   },
   watch:{
       letter(){
@@ -53,7 +53,7 @@ export default {
               const element=this.$refs[this.letter][0];
               this.scroll.scrollToElement(element);
           }
-          console.log(this.letter);
+          // console.log(this.letter);
       }
   },
   methods:{
