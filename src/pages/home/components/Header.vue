@@ -16,11 +16,14 @@
 </template>
 
 <script>
+import {mapGetters, mapState} from 'vuex';
 export default {
   name: "HomeHeader",
-  props:{
-    city:String,
-  },
+  computed:{
+    ...mapState(['city']),
+    ...mapGetters(['doubleCity']),
+  }
+  
 };
 </script>
 
@@ -53,7 +56,7 @@ export default {
 }
 .header-right {
   line-height: 0.86rem;
-  width: 1.24rem;
+  min-width: 1.04rem;
   float: right;
   color:#fff;
   text-align: center;

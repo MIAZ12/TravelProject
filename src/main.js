@@ -11,6 +11,7 @@ import './assets/style/iconfont.css';
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 // eslint-disable-next-line import/first
 import 'swiper/swiper-bundle.css';
+import store from './store/index';
 
 Vue.use(VueAwesomeSwiper);
 Vue.config.productionTip = false;
@@ -19,6 +20,7 @@ fastClick.attach(document.body);
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>',
 });
